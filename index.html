@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+    <title>Studio Gentile</title>
+  </head>
+  <body>
+    <header class="p-50">
+      <div class="logo">
+        <img src="/assets/logo.png" alt="" />
+      </div>
+      <div class="nav">
+        <ul>
+          <a href="#accueil"><li>Accueil</li></a>
+          <a href="#quienes-somos"><li>Équipe</li></a>
+          <a href="#services">
+            <li class="prestations">
+              Prestations
+                <ul class="submenu">
+                  <li><a href="#traductions">Traduction</a></li>
+                  <li><a href="#formation">Formation</a></li>
+                  <li><a href="#interpret">Interprétariat</a></li>
+                </ul>
+            
+            </li></a
+          >
+          <a href="#contact"><li>Contact</li></a>
+        </ul>
+        <div class="navicon" id="open-menu-mobile">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="menu-mobile" id="menu-mobile">
+          <i class="fa-solid fa-xmark" id="close-menu-mobile"></i>
+          <div class="nav-mobile">
+            <ul>
+              <a href="#accueil"><li>Accueil</li></a>
+              <a href="#quienes-somos"><li>Équipe</li></a>
+              <a href="#services"
+                ><li>
+                  Prestations
+
+                  <ul class="submenu">
+                    <li><a href="#traductions">Traduction</a></li>
+                    <li><a href="#formation">Formation</a></li>
+                    <li><a href="#interpret">Interprétariat</a></li>
+                  </ul>
+                </li></a
+              >
+              <a href="#contact"><li>Contact</li></a>
+            </ul>
+          </div>
+          <div class="contact-social-icons">
+            <svg
+              id="Capa_1"
+              data-name="Capa 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 36 36"
+            >
+              <title>SOCIAL ICONS</title>
+              <path
+                d="M17.79,32.49l-2.43-3.24-6.5-8.66A11.18,11.18,0,0,1,9.51,6.31a10.83,10.83,0,0,1,9.33-3.61,11.2,11.2,0,0,1,7.73,18.13C23.7,24.61,20.86,28.42,18,32.23Zm7.45-18.65A7.45,7.45,0,1,0,18,21.27,7.45,7.45,0,0,0,25.25,13.84Z"
+                style="fill: #96211a"
+              />
+            </svg>
+            <a href="https://www.facebook.com/Gentile.studio/ " target="_blank">
+            <svg
+              id="Capa_1"
+              data-name="Capa 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 36 36"
+            >
+              <title>SOCIAL ICONS</title>
+              <path
+                d="M33,17v1.72c0,.09,0,.18,0,.27-.08.59-.11,1.18-.25,1.76A14.51,14.51,0,0,1,22.45,32c-.59.19-1.21.29-1.83.44V22.11H24l.65-4.25H20.61c0-1,0-1.92,0-2.87a2,2,0,0,1,1.67-2.08,4.9,4.9,0,0,1,.91-.08c.54,0,1.08,0,1.64,0V9.2l-.46-.06A14,14,0,0,0,20.56,9a5,5,0,0,0-3.18,1.58A5.49,5.49,0,0,0,16,14.18c0,1.12,0,2.24,0,3.36,0,.1,0,.2,0,.34H12.31v4.25H16V32.39c-.54-.12-1.05-.22-1.56-.36A14.7,14.7,0,0,1,3.64,18.51a14.13,14.13,0,0,1,2.07-8.16,14.41,14.41,0,0,1,12-7.15,13.53,13.53,0,0,1,6.87,1.37,14.48,14.48,0,0,1,8.23,10.74C32.88,15.87,32.92,16.44,33,17Z"
+                style="fill: #96211a"
+              />
+            </svg>
+          </a>
+          <a href="https://twitter.com/studiogentile" target="_blank">
+            <svg
+              id="Capa_1"
+              data-name="Capa 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 36 36"
+            >
+              <title>SOCIAL ICONS</title>
+              <path
+                d="M2.23,29.1a13.77,13.77,0,0,0,9.65-2.78,6.84,6.84,0,0,1-6.17-4.62,7.56,7.56,0,0,0,2.94-.14,6.72,6.72,0,0,1-3.8-2.38A6.51,6.51,0,0,1,3.41,15a6.64,6.64,0,0,0,2.88.79c-2.91-2.45-3.57-5.37-2-8.87a18.92,18.92,0,0,0,13.65,7A17.26,17.26,0,0,1,17.91,12,6.31,6.31,0,0,1,22,6.23a6.35,6.35,0,0,1,7.1,1.36.54.54,0,0,0,.55.15,13.85,13.85,0,0,0,3.88-1.54A6.85,6.85,0,0,1,30.82,9.8a12.54,12.54,0,0,0,3.62-1,12.78,12.78,0,0,1-3,3.15.74.74,0,0,0-.33.7,18.84,18.84,0,0,1-2,8.81,18.44,18.44,0,0,1-7,7.81A18,18,0,0,1,15,31.82a19.68,19.68,0,0,1-6.72-.25,18.46,18.46,0,0,1-6-2.42Z"
+                style="fill: #96211a"
+              />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/nicolagentile/" target="_blank">
+            <svg
+              id="Capa_1"
+              data-name="Capa 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 36 36"
+            >
+              <title>SOCIAL ICONS</title>
+              <path
+                d="M32,32.27H26.23c0-.15,0-.29,0-.42,0-3.05,0-6.11,0-9.16A11.58,11.58,0,0,0,26,20.49a2.47,2.47,0,0,0-2.52-2.12,3.11,3.11,0,0,0-2.81,1,3.78,3.78,0,0,0-.78,2.06c-.06.62-.09,1.23-.1,1.85,0,2.86,0,5.72,0,8.57v.38H14V13.74h5.52V16.2l.07,0a1.8,1.8,0,0,0,.14-.17,5.8,5.8,0,0,1,4.31-2.7,8.59,8.59,0,0,1,3.85.33,5.2,5.2,0,0,1,3.48,3.58A13.17,13.17,0,0,1,32,21.34c0,3.56,0,7.12,0,10.68C32,32.1,32,32.18,32,32.27Z"
+                style="fill: #96211a"
+              />
+              <path d="M4.62,32.28V13.74h5.74V32.28Z" style="fill: #96211a" />
+              <path
+                d="M10.82,7.82A3.34,3.34,0,1,1,7.46,4.5,3.33,3.33,0,0,1,10.82,7.82Z"
+                style="fill: #96211a"
+              />
+            </svg>
+          </a>
+            <svg></svg>
+          </div>
+        </div>
+      </div>
+      <div class="social-icons">
+        <a href="#contact"><img src="/assets/map.svg" alt="map" /></a>
+       <a href="https://www.facebook.com/Gentile.studio/ " target="_blank"><img src="/assets/facebook.svg" alt="facebook" /></a> 
+        <a href="https://twitter.com/studiogentile" target="_blank"><img src="/assets/twitter.svg" alt="twitter" /></a>
+       <a href="https://www.linkedin.com/in/nicolagentile/" target="_blank"> <img src="/assets/linkedin.svg" alt="linkedin" /></a>
+      </div>
+    </header>
+    <div class="container">
+      <div class="slider" id="accueil">
+        <div class="slider-content">
+          <div class="slider-title-text">
+            <h1>Studio Gentile</h1>
+            <p>Depuis 1998,</p>
+            <p>nous parlons le même langage</p>
+            <p>celui de l'efficience:</p>
+          </div>
+
+          <div class="slider-title-second">
+            <h3>3 agences :</h3>
+            <p>
+              <a href="https://goo.gl/maps/2GPzcEfbY7jDjKrM6" target="_blank"
+                >Nice</a
+              >
+              |
+              <a href="https://goo.gl/maps/uuNvphfRc7DxKRUJ6" target="_blank"
+                >Monaco</a
+              >
+              |<a href="https://goo.gl/maps/QQQskYiSKtsKHGur5" target="_blank"
+                >Sophia</a
+              >
+            </p>
+            <h3>3 Prestations :</h3>
+            <p>traductions, formations, Interprétariat</p>
+            <h3>2 Certifications</h3>
+            <p>ISO 9001 : 2015 | QUALIOPI</p>
+          </div>
+          <div class="bottom-images">
+            <img src="/assets/afaq-iso-9001.png" alt="" width="130"/>
+            <img src="/assets/iconos/qualiopi-logo.jpg" alt="" width="130"/>
+          </div>
+        </div>
+        <div class="slider-content-image">
+          <!--SLIDER BEGIN-->
+          <div
+          id="carouselExampleCrossfade"
+          class="carousel slide carousel-fade relative h-screen"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCrossfade"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCrossfade"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCrossfade"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCrossfade"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCrossfade"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
+            <button
+            type="button"
+            data-bs-target="#carouselExampleCrossfade"
+            data-bs-slide-to="5"
+            aria-label="Slide 6"
+          ></button>
+          <button
+          type="button"
+          data-bs-target="#carouselExampleCrossfade"
+          data-bs-slide-to="6"
+          aria-label="Slide 7"
+        ></button>
+        <button
+        type="button"
+        data-bs-target="#carouselExampleCrossfade"
+        data-bs-slide-to="7"
+        aria-label="Slide 8"
+      ></button>
+
+          </div>
+          <div class="carousel-inner relative w-full overflow-hidden ">
+            <div class="carousel-item active float-left w-full ">
+              <img
+                src="/assets/CARRUSEL-IMAGENES/1.jpg"
+                class="block w-full h-screen"
+                alt="img1"
+              />
+            </div>
+            <div class="carousel-item float-left w-full">
+              <img
+                src="/assets/CARRUSEL-IMAGENES/2.jpg"
+                class="block w-full h-screen"
+                alt="img2"
+              />
+            </div>
+            <div class="carousel-item float-left w-full">
+              <img
+                src="/assets/CARRUSEL-IMAGENES/3.jpg"
+                class="block w-full h-screen"
+                alt="img3"
+              />
+            </div>
+            <div class="carousel-item float-left w-full">
+              <img
+                src="/assets/CARRUSEL-IMAGENES/4.jpg"
+                class="block w-full h-screen"
+                alt="img4"
+              />
+            </div>
+            <div class="carousel-item float-left w-full">
+              <img
+                src="/assets/CARRUSEL-IMAGENES/5.jpg"
+                class="block w-full h-screen"
+                alt="img5"
+              />
+            </div>
+            <div class="carousel-item float-left w-full">
+              <img
+                src="/assets/CARRUSEL-IMAGENES/7.jpg"
+                class="block w-full h-screen"
+                alt="img6"
+              />
+            </div>
+            <div class="carousel-item float-left w-full">
+              <img
+                src="/assets/CARRUSEL-IMAGENES/8.jpg"
+                class="block w-full h-screen"
+                alt="img7"
+              />
+            </div>
+            <div class="carousel-item float-left w-full">
+              <img
+                src="/assets/CARRUSEL-IMAGENES/9.jpg"
+                class="block w-full h-screen"
+                alt="img8"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+            type="button"
+            data-bs-target="#carouselExampleCrossfade"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+            type="button"
+            data-bs-target="#carouselExampleCrossfade"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!--SLIDER END-->
+        </div>
+        
+      </div>
+
+    
+      <div class="counter">
+        <div class="counter-info" data-aos="fade-in">
+          <p id="cien">+100</p>
+          <span>Collaborateurs externalisés de langue maternelle</span>
+        </div>
+        <div class="counter-info" data-aos="fade-in">
+          <p id="75">+75000</p>
+          <span>Mots traduits </span>
+          <br />
+          <br />
+        </div>
+        <div class="counter-info" data-aos="fade-in">
+          <p>25</p>
+          <span>Ans d’expérience</span>
+          <br />
+          <br />
+          <br />
+        </div>
+        <div class="counter-info" data-aos="fade-in">
+          <p>+70</p>
+          <span>Langues de travail</span>
+          <br />
+          <br />
+          <br />
+        </div>
+        <div class="counter-info" data-aos="fade-in">
+          <p>+98%</p>
+          <span>De nos clientssont très satisfaits</span>
+          <br />
+          <br />
+        </div>
+      </div>
+
+      <div class="quienes-somos" id="quienes-somos">
+        <div class="slider-content" data-aos="fade-in">
+
+
+
+
+
+          </p>
+          <h1>
+            Qui<br />
+            sommes-nous
+          </h1>
+          <p>
+            2 Co fondateurs Nicola et Véronique, Nicola expert près
+            de la Cour d’Appel de Monaco avec une expérience avérée
+            en traduction et interprétariat.
+          </p>
+
+          <p>
+            Véronique Responsable Qualité auditeur IRCA avec une expérience
+            en Management des entreprises.
+          </p>
+
+          <p>
+            2 collaboratrices en interne, Ophélie, Responsable de projets
+            Traductions – Formations - Interprétariat
+          </p>
+
+          <p>
+            Victoria, Responsable de projet Traductions et Interprétariat
+          </p>
+          <p>            100 collaborateurs</p>
+          <p>  Tous de langue maternelle, sélectionnés et évalués selon des
+            >critères déterminés dans le cadre de notre système de management
+            certifié selon la norme ISO 9001 : 2015 et QUALIOPI
+            pour les actions de formation.</p>
+        </div>
+        <div class="slider-content-image-avatar">
+          <div class="avatar" data-aos="fade-in">
+            <div class="avatar-top">
+              <div class="avatar-info">
+                <img src="assets/avatar-nicola.jpg" alt="" />
+                <h3>NICOLA GENTILE</h3>
+                <p>Gérant Fondateur</p>
+                <p>Tel: 97 70 76 60</p>
+                <p>nicola@studiogentile.fr</p>
+              </div>
+              <div class="avatar-info">
+                <img src="assets/avatar-veronica.jpg" alt="" />
+                <h3>VÉRONIQUE GENTILE</h3>
+                <p>Gérant Fondateur</p>
+                <p>Tel: 97 70 76 60</p>
+                <p>veronique@studiogentile.fr</p>
+              </div>
+            </div>
+            <div class="avatar-bottom">
+              <div class="avatar-info">
+                <img src="assets/ophelia.jpg" alt="" />
+                <h3>OPHÉLIE GIORGIS</h3>
+                <p>Responsable de Project</p>
+                <p>Tel: 97 70 76 60</p>
+                <p>ophelie@studiogentile.fr</p>
+              </div>
+              <div class="avatar-info">
+                <img src="assets/avatar-veronica.jpg" alt="" />
+                <h3>VICTORIA</h3>
+                <p>Responsable de Project</p>
+                <p>Tel: 97 70 76 60</p>
+                <p>victoria@studiogentile.fr</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="services" id="services">
+        <div class="services-info" data-aos="fade-in">
+          <h2>Services</h2>
+          <p>Traductions – Sous titrage et Voix Off</p>
+          <p>
+            Traductions destinées à des professionnels, des entités publiques ou
+            des particuliers
+          </p>
+          <p>Sous-titrage et Voix Off</p>
+          <p>
+            Pour que les supports de communication soient compréhensibles par
+            tous
+          </p>
+        </div>
+        <div class="services-cards" id="services">
+          <div class="card" data-aos="fade-in">
+            <div class="card-header">
+              <img src="assets/Tradu.jpg" alt="" />
+            </div>
+            <div class="card-info">
+              <h3>Traduction</h3>
+              <p>
+                Sous titrage et Voix Off Destinées à des professionnels,des entités publiques oudes particuliers Sous-titrage et Voix Off Assermentés
+              </p>
+            </div>
+          </div>
+          <div class="card" data-aos="fade-in">
+            <div class="card-header">
+              <img src="assets/Capture d’écran 2022-05-27 112836.png" alt="" />
+            </div>
+            <div class="card-info">
+              <h3>Formation</h3>
+              <p>
+                Langues étrangères – FLEProfessionnels et particuliersCertifications : Leveltel – TOEIC – DCL
+              </p>
+            </div>
+          </div>
+          <div class="card" data-aos="fade-in">
+            <div class="card-header">
+              <img src="assets/interpretar.jpg" alt="" />
+            </div>
+            <div class="card-info">
+              <h3>Interprétariat</h3>
+              <p>
+                Simultané | liaison | chuchotage Professionnels Matériel fourni
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="traduction-services" id="traductions">
+        <div class="traduction-heading" data-aos="fade-in" >
+          <div class="first-block">
+            <img src="/assets/sg.jpg" alt="" />
+            <h1>Traduction</h1>
+            <p><i>"Pour répondre aux exigences légaleset reglamentaires"</i></p>
+          </div>
+          <div class="second-block">
+            Traductions – Sous titrage et Voix Off Traductions destinées à des
+            professionnels, des entitéspubliques ou des particuliers
+            Sous-titrage et Voix Off
+          </div>
+        </div>
+
+        <div class="traduction-body" data-aos="fade-in">
+          <div class="traduction-card">
+            <!-- <span class="traduction-icon"></span> -->
+            <img src="/assets/iconos/1.png" alt="" width="100">
+            <h3>Traductions certifiées</h3>
+            <br />
+            <br />
+            <p>
+              Contrats, assignations, actes d’état civil, compromis, actes de vente.Traductions réalisées par des experts judiciaires ayant prêté serment auprès d’une Cour d’Appel française.
+            </p>
+          </div>
+
+          <div class="traduction-card">
+            <!-- <span class="traduction-icon"></span> -->
+            <img src="/assets/iconos/2.png" alt="" width="100">
+            <h3>Traductions libres</h3>
+            <br />
+            <br />
+            <br />
+            <p>
+              Tout type de documents devant être traduits (site web, brochure, rapport etc.)Traductions réalisées par des traducteurs de langue maternelle qualifiés selon notre Process Qualité.
+            </p>
+          </div>
+
+          <div class="traduction-card">
+             <!-- <span class="traduction-icon"></span> -->
+             <img src="/assets/iconos/3.png" alt="" width="100">
+            <h3>Révisión/relecture</h3>
+            <br />
+            <br />
+            <p>
+              Documents confiés par nos clients qui ont réalisés la traduction et qui souhaitent la faire contrôler par un professionnelRéviser un texte ce n'est pas le relire : la révision permet de retravailler le texte au niveau linguistique et stylistique.
+
+            </p>
+          </div>
+
+          <div class="traduction-card">
+             <!-- <span class="traduction-icon"></span> -->
+             <img src="/assets/iconos/4.png" alt="" width="100">
+            <h3>Légalisation</h3>
+            <br />
+            <p>
+              Documents destinés à l’étrangerTraduits par un expert judiciaire dont la signature est authentifiée
+            </p>
+          </div>
+
+          <div class="traduction-card">
+            <!-- <span class="traduction-icon"></span> -->
+            <img src="/assets/iconos/5.png" alt="" width="100">
+            <h3>Sous titrageet Voix Off</h3>
+            <br />
+            <br />
+            <br />
+            <p>
+              Contenus audio traduits de façon synchrone restitués sous forme de texte ou en voix off.Traductions réalisées par des traducteurs de langue maternelle qualifiés selon notre Process Qualité.
+
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="domains-dexpertise" data-aos="fade-in">
+        <h1>Domains d'expertise</h1>
+        <div class="domains-dexpertise-body">
+          <div class="three-column">
+            <div class="domains-dexpertise-card">
+                 <!-- <span></span> -->
+            <img src="/assets/iconos/6.png" alt="" width="100">
+              <p>Droit Justice</p>
+            </div>
+            <div class="domains-dexpertise-card">
+               <!-- <span></span> -->
+            <img src="/assets/iconos/7.png" alt="" width="100">
+              <p>Environnement Déchets</p>
+            </div>
+            <div class="domains-dexpertise-card">
+                <!-- <span></span> -->
+            <img src="/assets/iconos/8.png" alt="" width="100">
+              <p>Sport Animation</p>
+            </div>
+          </div>
+          <div class="three-column">
+            <div class="domains-dexpertise-card">
+               <!-- <span></span> -->
+            <img src="/assets/iconos/9.png" alt="" width="100">
+              <p>Communication Marketing</p>
+            </div>
+            <div class="domains-dexpertise-card">
+                <!-- <span></span> -->
+            <img src="/assets/iconos/10.png" alt="" width="100">
+              <p>Hôtellerie Tourisme</p>
+            </div>
+            <div class="domains-dexpertise-card">
+                <!-- <span></span> -->
+            <img src="/assets/iconos/11.png" alt="" width="100">
+              <p>Transport Logistique</p>
+            </div>
+          </div>
+          <div class="three-column">
+            <div class="domains-dexpertise-card">
+                <!-- <span></span> -->
+            <img src="/assets/iconos/12.png" alt="" width="100">
+              <p>Banque Assurance</p>
+            </div>
+            <div class="domains-dexpertise-card">
+                <!-- <span></span> -->
+            <img src="/assets/iconos/13.png" alt="" width="100">
+              <p>Informatique Web Réseaux</p>
+            </div>
+            <div class="domains-dexpertise-card">
+                <!-- <span></span> -->
+            <img src="/assets/iconos/14.png" alt="" width="100">
+              <p>BTP Urbanisme</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="commande-en-ligne">
+        <h1>Votre traduction</h1>
+        <h1>assermentée en ligne</h1>
+        <span>Traduction assermentée des vous documents dans plus de 20 langues.</span>
+        <button>JE COMMANDE EN LIGNE!</button>
+        <p class="pt-4">Recevez notre document traduit par un traducteur</p>
+        <p>assermentée par email a partir de 2 jours ouvrés * au format PDF.</p>
+      </div>
+
+      <div class="int-heading" data-aos="fade-in" id="interpret">
+        <div class="first-block">
+          <img src="/assets/sg.jpg" alt="" />
+          <h1>Interprétariat</h1>
+          <div class="text-block">
+            <h2>Interprétariat simultané dans le cadre de l’organisation d’évènements :</h2>
+            <h2>conférences, congrès, séminaires.</h2>
+            <p>L'interprète travaille dans une cabine insonorisée ou via un bidule (que l'on appelle aussi valisette, cet outil comporte des écouteurs destinés aux auditeurs, ainsi qu'un microphone sans fil pour l'interprète ou les interprètes).L'orateur utilise un microphone ; l'interprète entend le discours dans ses écouteurs et restitue le message presque instantanément par microphone.</p>
+         <h2>Interprétariat consécutif dans le cadre d'assemblées générales, réunions, signatures d'actes, visites d'entreprise.</h2>
+          <p>Comment se déroule-t-il ?L'interprète écoute l'intervention et la retransmet, à la fin, dans une autre langue, en s'aidant généralement de notes.</p>
+        <h2>Fourniture du matériel audio</h2>
+        <p>Fourniture du matériel : Valises téléguidées, bidules, casques, Cabines, micros, etc.</p>
+          </div>
+     
+      </div>
+       
+      </div>
+
+      <div class="int-heading" data-aos="fade-in" id="formation">
+        <div class="first-block">
+          <img src="/assets/sg.jpg" alt="" />
+          <h1>Formations</h1>
+          <div class="text-block">
+            <h2>Face à face:</h2>
+          <p class="none-p">Un formateur dédié natif sélectionné et qualifié selon notre process qualité ISO 9001Sur site ou à distance</p>
+        <h2>Face à face + E-learning.</h2>
+        <p>Parcours E-learning adapté grâce au système IA de la plateformeAccès à la plateforme 24h/24h pendant 6 moisUn formateur dédié natif sélectionné et qualifié selon notre process qualité ISO 9001Formation intra entreprise ou inter entrepriseSur site ou à distance</p>
+         <h2>Modules de 30 heures à 90 heures.</h2>
+         <p>Durée déterminée en fonction du niveau des apprenants et de leurs objectifs.</p>
+         <p>Modalités pédagogiques:</p>
+         <p>Plateforme avec contenus adaptés en fonction de la progression des apprenants.Suivi pédagogique avec le Responsable PédagogiqueÉchanges / jeux de rôles / supports pédagogiques en fonction des thèmes abordés.Pour les personnes en situation d’handicap les moyens pédagogiques à mettre en place sont identifiés en début de formation lors de l’entretien d’admissibilité.Formation à distance : utilisation de l’outil Zoom.</p>
+      <h2>Modalités d’évaluation</h2>
+       <p> - Exercices avec révision. </p>
+       <p> - Test sur la plateforme Elearning pour la formule Face à Face Elearning. </p> 
+       <p> - Tests de fin de session Level Tel (en option) / TOEIC ou autre</p>
+       <h2>Tarifs catalogue</h2>
+       <p>Formule face à face Elearning : à partir de 35 € HT/h par participant</p>
+       <p>Formule face à face : à partir de 30 € HT/h</p>
+       <p>Les tarifs sont calculés en fonction du nombre de participant par session et s’il s’agit de formation inter ou intra entreprise.</p>
+       
+       <div class="pdf">
+        <img src="/assets/iconos/pdf-icon-13.svg" alt="">
+        <p>Consultez nos conditions Générales de vente</p>
+    </div>
+
+
+        <h2>Conditions d’admission et d’inscription</h2>
+        <p>Entretien avant la contractualisation avec le responsable pédagogique afin d’identifier les besoins de chaque bénéficiaire et établir des préconisations pédagogiques.</p>
+       <p>Auto évaluation du niveau et/ou test de langues</p>
+       <p>Pour les personnes en situation d’handicap nous pouvons nous reposer sur notre réseau de partenaires (AGEFIPH par exemple) afin d’apprécier les besoins spécifiques.</p>
+      <p>Responsable inscription et référente handicap : Véronique Gentile</p>
+       
+      <div class="pdf pdf-info">
+        <img src="/assets/iconos/telefono.svg" alt="">
+        <p>06 71 45 44 87</p>
+      </div>
+
+      <div class="pdf pdf-info">
+        <img src="/assets/iconos/mail.svg" alt="">
+        <p>studiogentilecpf@gmail.com</p>
+      </div>
+
+    <div class="pdf">
+      <img src="/assets/iconos/pdf-icon-13.svg" alt="">
+      <p>Consultez le Règlement Intérieur</p>
+  </div>
+
+  <h2>Programmes de formation disponibles</h2>
+  <p class="text-bordo">Niveau A1 – A2</p>
+  <p class="text-bordo">Niveau B1 – B2</p>
+  <p class="text-bordo">Niveau C1 – C2</p>
+
+  <div class="pdf">
+    <img src="/assets/iconos/pdf-icon-13.svg" alt="">
+    <p>Consultez le Catalogue</p>
+</div>
+    
+    
+    </div>
+     
+      </div>
+       
+      </div>
+
+      <div class="contact" id="contact">
+        <div class="contact-info" data-aos="fade-in">
+          <div class="contact-info-div">
+            <h3>MONACO</h3>
+            <div class="address-marker">
+              <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+                <title>SOCIAL ICONS</title>
+                <path d="M17.79,32.49l-2.43-3.24-6.5-8.66A11.18,11.18,0,0,1,9.51,6.31a10.83,10.83,0,0,1,9.33-3.61,11.2,11.2,0,0,1,7.73,18.13C23.7,24.61,20.86,28.42,18,32.23Zm7.45-18.65A7.45,7.45,0,1,0,18,21.27,7.45,7.45,0,0,0,25.25,13.84Z" style="fill: #ffffff"></path>
+              </svg>
+              <p>74, Boulevard d’Italie - 98000 MONACO</p>
+            </div>
+            <p>Tel: 97 70 76 60</p>
+            <p>Fax: 99 99 45 00</p>
+            <p>contact@studiogentile.mc</p>
+          </div>
+          <div class="contact-info-div">
+            <h3>NICE</h3>
+            <div class="address-marker">
+              <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+                <title>SOCIAL ICONS</title>
+                <path d="M17.79,32.49l-2.43-3.24-6.5-8.66A11.18,11.18,0,0,1,9.51,6.31a10.83,10.83,0,0,1,9.33-3.61,11.2,11.2,0,0,1,7.73,18.13C23.7,24.61,20.86,28.42,18,32.23Zm7.45-18.65A7.45,7.45,0,1,0,18,21.27,7.45,7.45,0,0,0,25.25,13.84Z" style="fill: #ffffff"></path>
+              </svg>
+            <p>29/B Rue Pastorelli - 06000 NICE</p>
+            </div>
+            <p>Tel: 04 92 09 97 50 - Fax: 04 93 79 64 06</p>
+            <p>contact@studio-gentile.fr</p>
+            <p>04 92 09 97 50</p>
+          </div>
+          <div class="contact-info-div">
+            <h3>SOPHIA ANTIPOLIS</h3>
+            <div class="address-marker">
+              <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+                <title>SOCIAL ICONS</title>
+                <path d="M17.79,32.49l-2.43-3.24-6.5-8.66A11.18,11.18,0,0,1,9.51,6.31a10.83,10.83,0,0,1,9.33-3.61,11.2,11.2,0,0,1,7.73,18.13C23.7,24.61,20.86,28.42,18,32.23Zm7.45-18.65A7.45,7.45,0,1,0,18,21.27,7.45,7.45,0,0,0,25.25,13.84Z" style="fill: #ffffff"></path>
+              </svg>
+            <p>291, rue Albert Caquot - 06560 Sophia Antipolis Valbonne</p>
+            </div>
+            <p>contact@studio-gentile.fr</p>
+            <p>Tél. 04 92 09 97 50</p>
+            <p>Fax 04 93 79 64 06</p>
+          </div>
+          <div class="contact-social-icons">
+    <a href="https://www.facebook.com/Gentile.studio/ " target="_blank">
+            <svg
+              id="Capa_1"
+              data-name="Capa 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 36 36"
+            >
+              <title>SOCIAL ICONS</title>
+              <path
+                d="M33,17v1.72c0,.09,0,.18,0,.27-.08.59-.11,1.18-.25,1.76A14.51,14.51,0,0,1,22.45,32c-.59.19-1.21.29-1.83.44V22.11H24l.65-4.25H20.61c0-1,0-1.92,0-2.87a2,2,0,0,1,1.67-2.08,4.9,4.9,0,0,1,.91-.08c.54,0,1.08,0,1.64,0V9.2l-.46-.06A14,14,0,0,0,20.56,9a5,5,0,0,0-3.18,1.58A5.49,5.49,0,0,0,16,14.18c0,1.12,0,2.24,0,3.36,0,.1,0,.2,0,.34H12.31v4.25H16V32.39c-.54-.12-1.05-.22-1.56-.36A14.7,14.7,0,0,1,3.64,18.51a14.13,14.13,0,0,1,2.07-8.16,14.41,14.41,0,0,1,12-7.15,13.53,13.53,0,0,1,6.87,1.37,14.48,14.48,0,0,1,8.23,10.74C32.88,15.87,32.92,16.44,33,17Z"
+                style="fill: white"
+              />
+            </svg>
+          </a>
+          <a href="https://twitter.com/studiogentile" target="_blank">
+            <svg
+              id="Capa_1"
+              data-name="Capa 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 36 36"
+            >
+              <title>SOCIAL ICONS</title>
+              <path
+                d="M2.23,29.1a13.77,13.77,0,0,0,9.65-2.78,6.84,6.84,0,0,1-6.17-4.62,7.56,7.56,0,0,0,2.94-.14,6.72,6.72,0,0,1-3.8-2.38A6.51,6.51,0,0,1,3.41,15a6.64,6.64,0,0,0,2.88.79c-2.91-2.45-3.57-5.37-2-8.87a18.92,18.92,0,0,0,13.65,7A17.26,17.26,0,0,1,17.91,12,6.31,6.31,0,0,1,22,6.23a6.35,6.35,0,0,1,7.1,1.36.54.54,0,0,0,.55.15,13.85,13.85,0,0,0,3.88-1.54A6.85,6.85,0,0,1,30.82,9.8a12.54,12.54,0,0,0,3.62-1,12.78,12.78,0,0,1-3,3.15.74.74,0,0,0-.33.7,18.84,18.84,0,0,1-2,8.81,18.44,18.44,0,0,1-7,7.81A18,18,0,0,1,15,31.82a19.68,19.68,0,0,1-6.72-.25,18.46,18.46,0,0,1-6-2.42Z"
+                style="fill: white"
+              />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/nicolagentile/" target="_blank">
+            <svg
+              id="Capa_1"
+              data-name="Capa 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 36 36"
+            >
+              <title>SOCIAL ICONS</title>
+              <path
+                d="M32,32.27H26.23c0-.15,0-.29,0-.42,0-3.05,0-6.11,0-9.16A11.58,11.58,0,0,0,26,20.49a2.47,2.47,0,0,0-2.52-2.12,3.11,3.11,0,0,0-2.81,1,3.78,3.78,0,0,0-.78,2.06c-.06.62-.09,1.23-.1,1.85,0,2.86,0,5.72,0,8.57v.38H14V13.74h5.52V16.2l.07,0a1.8,1.8,0,0,0,.14-.17,5.8,5.8,0,0,1,4.31-2.7,8.59,8.59,0,0,1,3.85.33,5.2,5.2,0,0,1,3.48,3.58A13.17,13.17,0,0,1,32,21.34c0,3.56,0,7.12,0,10.68C32,32.1,32,32.18,32,32.27Z"
+                style="fill: white"
+              />
+              <path d="M4.62,32.28V13.74h5.74V32.28Z" style="fill: white" />
+              <path
+                d="M10.82,7.82A3.34,3.34,0,1,1,7.46,4.5,3.33,3.33,0,0,1,10.82,7.82Z"
+                style="fill: white"
+              />
+            </svg>
+          </a>
+            <svg></svg>
+          </div>
+        </div>
+        <form action="" data-aos="fade-in">
+          <div class="form-first-section">
+            <div>
+              <label for="name">Nom</label>
+              <input type="text" class="input-text p-2" required/>
+            </div>
+            <div>
+              <label for="prenom">Prénom</label>
+              <input type="text" name="" id="" class="input-text p-2" required/>
+            </div>
+          </div>
+          <div class="form-second-section">
+            <div>
+              <label for="email">Email</label>
+              <input type="email" class="input-text p-2" required/>
+            </div>
+            <div>
+              <label for="tel" class="input-text">Téléphone</label>
+              <input type="tel" name="" id="" class="input-text p-2" required/>
+            </div>
+          </div>
+          <div>
+            <label for="subject">Objet</label>
+            <input type="text" class="input-text p-2 subject" required/>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              class="subject"
+              required
+            ></textarea>
+          </div>
+          <div class="button-container">
+            <button>ENVOYER</button>
+          </div>
+        </form>
+      </div>
+
+      <footer>
+        <div class="map" data-aos="fade-in">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12697.746231737565!2d7.261376291455281!3d43.70023855814272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdc54245f9b06b%3A0xcfac3979cca16463!2sStudio%20Gentile!5e0!3m2!1ses!2sar!4v1651242262073!5m2!1ses!2sar"
+            width="1000"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="copyright">
+          <p>© 2021-2022 par EMOBDEV SAS</p>
+        </div>
+      </footer>
+
+
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init()
+    </script>
+    <script src="counter.js"></script>
+  </body>
+</html>
